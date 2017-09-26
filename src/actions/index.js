@@ -3,6 +3,13 @@
 export function selectBook(book) {
 
   return {
-    //You should create a Type and Payload for your Action here
+    type: BOOK_SELECTED,
+    payload:{
+      pages: bookList.pages,
+      author: bookList.author,
+      price: bookList.price,
+      published_date: bookList.published_date,
+      category: bookList.category
+    }
   };
 }
