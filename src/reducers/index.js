@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
+import BOOK_SELECTED from '../actions/index.js';
 
 import bookList from '../data/books';
-
 const initialState = bookList;
+
 console.log(initialState);
 //console.log(initialState);
 //state argument isnt application state, only state that reducer is responsible for
@@ -12,7 +13,7 @@ console.log(initialState);
 const ActiveBook = (state = null, action) => {
   switch(action.type) {
     case 'BOOK_SELECTED':
-    return action.payload
+    return action.payload.book
   }
   return state;
 
